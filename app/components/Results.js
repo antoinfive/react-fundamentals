@@ -6,10 +6,11 @@ var UserDetails = require('./UserDetails');
 var ReactRouter = require('react-router');
 var Link = ReactRouter.Link;
 var MainContainer = require('./MainContainer');
+var Loading = require('./Loading');
 
 function StartOver() {
   return (
-   <div className="col-sm-12" style={styles.spaces}>
+   <div className="col-sm-12" style={styles.space}>
       <Link to='playerOne'>
         <button type='button' className='btn btn-lg btn-danger'> Start Over</button>
       </Link>
@@ -20,7 +21,9 @@ function StartOver() {
 function Results (props) {
   if (props.isLoading) {
     return (
-      <p> LOADING . . . </p>
+      <MainContainer>
+        <Loading speed={200} /> 
+      </MainContainer>
     )
   }
 
