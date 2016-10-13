@@ -3,7 +3,7 @@ var ReactDOM = require('react-dom');
 var routes = require('./config/routes');
 var Raven = require('raven-js');
 
-var sentryKey = '6fe394ac636f4240ac4f2425ec4b0e94'
+
 var sentryApp = '101973'
 var sentryURL = 'https://' + sentryKey + '@sentry.io/' + sentryApp
 var _APP_INFO = {
